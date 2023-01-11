@@ -36,7 +36,7 @@ for item in news:
         news_url = DOMEN + item.find("a").get("href") # сссылка на статью
         image = item.find("div", class_ = "tn-image-container").find("img").get("src") # ссылка на картинку
     except: 
-        image = item.find("div", class_ = "").find("source").get("src") # видео(!)
+        image = item.find("div", class_ = "tn-video-container").find("source").get("src") # видео(!)
         information = {
         "title": title.text,
         "description": description.text,
